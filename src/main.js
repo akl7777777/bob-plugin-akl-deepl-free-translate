@@ -1,4 +1,3 @@
-var api = require('./api.js');
 var config = require('./config.js');
 var utils = require('./utils.js');
 
@@ -64,6 +63,7 @@ function getTimeStamp(i_count) {
 let id = getRandomNumber();
 
 function supportLanguages() {
+  $log.error('***********' + JSON.stringify(config.supportedLanguages))
     return config.supportedLanguages.map(([standardLang]) => standardLang);
 }
 
@@ -73,7 +73,6 @@ function translate(query, completion) {
     (async () => {
         const targetLanguage = utils.langMap.get(query.detectTo);
         const sourceLanguage = utils.langMap.get(query.detectFrom);
-        $log.error('***********' + 69)
         if (!targetLanguage) {
             const err = new Error();
             Object.assign(err, {

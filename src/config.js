@@ -13,5 +13,7 @@ const supportedLanguages = [
     ['ru', 'ru'],
 ];
 
+
+
 exports.supportedLanguages = supportedLanguages;
 
