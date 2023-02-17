@@ -1,0 +1,27 @@
+{
+    "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
+    "version": "0.0.8",
+    "category": "translate",
+    "name": "免token调用deepl",
+    "summary": "免token调用deepl",
+    "icon": "icon.png",
+    "author": "akl7777777 <akl7777777@163.com>",
+    "homepage": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate",
+    "appcast": "",
+    "minBobVersion": "0.5.0",
+    "options": [
+        {
+            "identifier": "desc",
+            "type": "menu",
+            "title": "描述",
+            "defaultValue": "akl7777777",
+            "menuValues": [
+              {
+                "title": "免费调用deepL;无需token;无需key;",
+                "value": "akl7777777"
+              }
+            ],
+            "desc":"小芍同学免费调用deepL;无需token;无需key;"
+        }
+    ]
+}
