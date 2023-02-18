@@ -9,7 +9,4 @@
 ### 开发不易,如果喜欢可以请作者喝一杯可乐,谢谢!
 
 
-
-![image](https://user-images.githubusercontent.com/84266551/219544500-9e58b91d-57be-43c8-8f68-4c574a6e8dc8.png)
-
-<img width="436" alt="image" src="https://user-images.githubusercontent.com/84266551/219544616-042441db-2b45-4bb8-9027-a713f220237c.png">
+![image](https://user-images.githubusercontent.com/84266551/219829283-3ed1798e-aeed-4174-bbcb-f93bf3008817.png)
