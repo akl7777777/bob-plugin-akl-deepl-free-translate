@@ -7,7 +7,7 @@
     "icon": "icon.png",
     "author": "akl7777777 <akl7777777@163.com>",
     "homepage": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate",
-    "appcast": "",
+    "appcast": "https://raw.githubusercontent.com/akl7777777/bob-plugin-akl-deepl-free-translate/main/appcast.json",
     "minBobVersion": "0.5.0",
     "options": [
         {

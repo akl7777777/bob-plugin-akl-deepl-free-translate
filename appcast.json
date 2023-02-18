@@ -1,0 +1,19 @@
+{
+    "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
+    "versions": [
+        {
+            "version": "0.1.0",
+            "desc": "增加插件检测更新功能",
+            "sha256": "0389547c35eebefdebe9fb81ba84549bb17ccc729f691033d962d3279aa51cd8",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/deepl-bobplugin/bob-plugin-akl-deepl-translate_v0.1.0.bobplugin",
+            "minBobVersion": "0.5.0"
+        },
+        {
+            "version": "0.0.9",
+            "desc": "初始版本",
+            "sha256": "1fee5494fd88f6d0e02d15f7d063f75c08d735f1d997942a158a8d60c7414494",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/deepl-bobplugin/bob-plugin-akl-deepl-translate_v0.0.9.bobplugin",
+            "minBobVersion": "0.5.0"
+        }
+    ]
+}
