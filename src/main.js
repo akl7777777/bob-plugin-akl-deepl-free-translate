@@ -1,27 +1,6 @@
 var config = require('./config.js');
 var utils = require('./utils.js');
 
-/**
- * 由于各大服务商的语言代码都不大一样，
- * 所以我定义了一份 Bob 专用的语言代码，以便 Bob 主程序和插件之间互传语种。
- * Bob 语言代码列表 https://ripperhe.gitee.io/bob/#/plugin/addtion/language
- *
- * 转换的代码建议以下面的方式实现，
- * `xxx` 代表服务商特有的语言代码，请替换为真实的，
- * 具体支持的语种数量请根据实际情况而定。
- *
- * Bob 语言代码转服务商语言代码(以为 'zh-Hans' 为例): var lang = langMap.get('zh-Hans');
- * 服务商语言代码转 Bob 语言代码: var standardLang = langMapReverse.get('xxx');
- */
-
-// var items = [
-//     ['auto', 'xxx'],
-//     ['zh-Hans', 'xxx'],
-//     ['zh-Hant', 'xxx'],
-//     ['en', 'xxx'],
-// ];
-
-
 // 入参格式:
 // {"jsonrpc":"2.0","method" : "LMT_handle_texts","id":125090001,"params":{"texts":[{"text":"You trusted all proxies, this is NOT safe. We recommend you to set a value.","requestAlternatives":3}],"splitting":"newlines","lang":{"source_lang_user_selected":"EN","target_lang":"ZH"},"timestamp":1676555144560}}
 // 出参格式:
@@ -63,13 +42,10 @@ function getTimeStamp(i_count) {
 let id = getRandomNumber();
 
 function supportLanguages() {
-  $log.error('***********' + JSON.stringify(config.supportedLanguages))
     return config.supportedLanguages.map(([standardLang]) => standardLang);
 }
 
 function translate(query, completion) {
-    // const apiClient = new api.Api($option.apikey, $option.service);
-    
     (async () => {
         const targetLanguage = utils.langMap.get(query.detectTo);
         const sourceLanguage = utils.langMap.get(query.detectFrom);
@@ -110,17 +86,12 @@ function translate(query, completion) {
             body: $data.fromUTF8(post_str)
           };
           try {
-            $log.info('***********body==>' + post_str)
-            $log.info('***********url==>' + url)
-
             $http.request({
                 method: "POST",
                 url: url,
                 header: { 'Content-Type': 'application/json' },
                 body: $data.fromUTF8(post_str),
                 handler: function(resp) {
-                    $log.error('***********response==>' + JSON.stringify(resp.data.result))
-                    $log.error('***********resp.data.result.texts[0].text==>' + JSON.stringify(resp.data.result.texts[0].text))
                     completion({
                         result: {
                             from: query.detectFrom,
