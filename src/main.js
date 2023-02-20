@@ -42,84 +42,96 @@ function getTimeStamp(i_count) {
 let id = getRandomNumber();
 
 function supportLanguages() {
-    return config.supportedLanguages.map(([standardLang]) => standardLang);
+  return config.supportedLanguages.map(([standardLang]) => standardLang);
 }
 
 function translate(query, completion) {
-    (async () => {
-        const targetLanguage = utils.langMap.get(query.detectTo);
-        const sourceLanguage = utils.langMap.get(query.detectFrom);
-        if (!targetLanguage) {
-            const err = new Error();
-            Object.assign(err, {
-                _type: 'unsupportLanguage',
-                _message: '不支持该语种',
-            });
-            throw err;
-        }
-        const source_lang = sourceLanguage || 'ZH';
-        const target_lang = targetLanguage || 'EN';
-        const translate_text = query.text || '';
-        let response;
-        if (translate_text !== '') {
-          const url = 'https://www2.deepl.com/jsonrpc';
-        //   id = id + 1;
-            id = getRandomNumber()
-          const post_data = init_data(source_lang, target_lang);
-          const text = {
-            text: translate_text,
-            requestAlternatives: 3
-          };
-          post_data.id = id;
-          post_data.params.texts = [text];
-          post_data.params.timestamp = getTimeStamp(get_i_count(translate_text));
-          let post_str = JSON.stringify(post_data);
-          if ((id + 5) % 29 === 0 || (id + 3) % 13 === 0) {
-            post_str = post_str.replace('"method":"', '"method" : "');
-          } else {
-            post_str = post_str.replace('"method":"', '"method": "');
-          }
-          const options = {
-            method: 'POST',
-            url : url,
-            header: { 'Content-Type': 'application/json' },
-            body: $data.fromUTF8(post_str)
-          };
-          try {
-            $http.request({
-                method: "POST",
-                url: url,
-                header: { 'Content-Type': 'application/json' },
-                body: $data.fromUTF8(post_str),
-                handler: function(resp) {
-                    completion({
-                        result: {
-                            from: query.detectFrom,
-                            to: query.detectTo,
-                            toParagraphs: resp.data.result.texts[0].text.split('\n'),
-                        },
-                    });
-                }
+  (async () => {
+    const targetLanguage = utils.langMap.get(query.detectTo);
+    const sourceLanguage = utils.langMap.get(query.detectFrom);
+    if (!targetLanguage) {
+      const err = new Error();
+      Object.assign(err, {
+        _type: 'unsupportLanguage',
+        _message: '不支持该语种',
+      });
+      throw err;
+    }
+    const source_lang = sourceLanguage || 'ZH';
+    const target_lang = targetLanguage || 'EN';
+    const translate_text = query.text || '';
+    let response;
+    if (translate_text !== '') {
+      const url = 'https://www2.deepl.com/jsonrpc';
+      //   id = id + 1;
+      id = getRandomNumber()
+      const post_data = init_data(source_lang, target_lang);
+      const text = {
+        text: translate_text,
+        requestAlternatives: 3
+      };
+      post_data.id = id;
+      post_data.params.texts = [text];
+      post_data.params.timestamp = getTimeStamp(get_i_count(translate_text));
+      let post_str = JSON.stringify(post_data);
+      if ((id + 5) % 29 === 0 || (id + 3) % 13 === 0) {
+        post_str = post_str.replace('"method":"', '"method" : "');
+      } else {
+        post_str = post_str.replace('"method":"', '"method": "');
+      }
+      const options = {
+        method: 'POST',
+        url: url,
+        header: { 'Content-Type': 'application/json' },
+        body: $data.fromUTF8(post_str)
+      };
+      try {
+        $http.request({
+          method: "POST",
+          url: url,
+          header: { 'Content-Type': 'application/json' },
+          body: $data.fromUTF8(post_str),
+          handler: function (resp) {
+            if (resp.data && resp.data.result && resp.data.result.texts && resp.data.result.texts.length) {
+              completion({
+                result: {
+                  from: query.detectFrom,
+                  to: query.detectTo,
+                  toParagraphs: resp.data.result.texts[0].text.split('\n'),
+                },
               });
-        }
-        catch (e) {
-            $log.error('接口请求错误 ==> ' + JSON.stringify(e))
-            Object.assign(e, {
-                _type: 'network',
-                _message: '接口请求错误 - ' + JSON.stringify(e),
-            });
-            throw e;
-        }}
-    })().catch((err) => {
-        $log.error('***********解析返回值异常==>' + JSON.stringify(err))
-        completion({
-            error: {
-                type: err._type || 'unknown',
-                message: err._message || '未知错误',
-                addtion: err._addtion,
-            },
+            } else {
+              const errMsg = resp.data ? JSON.stringify(resp.data) : '未知错误'
+              completion({
+                error: {
+                  type: 'unknown',
+                  message: errMsg,
+                  addtion: errMsg,
+                },
+              });
+            }
+          }
         });
+      }
+      catch (e) {
+        $log.error('接口请求错误 ==> ' + JSON.stringify(e))
+        Object.assign(e, {
+          _type: 'network',
+          _message: '接口请求错误 - ' + JSON.stringify(e),
+        });
+        throw e;
+      }
+    }
+  })().catch((err) => {
+    $log.error('***********解析返回值异常==>' + JSON.stringify(err))
+    completion({
+      error: {
+        type: err._type || 'unknown',
+        message: err._message || '未知错误',
+        addtion: err._addtion,
+      },
     });
+  });
 }
 
 exports.supportLanguages = supportLanguages;
