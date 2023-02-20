@@ -5,7 +5,7 @@
 
 bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网地址:https://bobtranslate.com/
 
-没有bob的同学,我也有一个单独启动的deepl服务项目,效果跟这个是一样的,只不过要自己启动服务,自己调用接口;详情看[这里](https://github.com/akl7777777/deepl-free-translate-service)
+没有bob的同学,我也有一个单独启动的deepl服务项目,效果跟这个是一样的,只不过要自己启动服务,自己调用接口;详情点[这里](https://github.com/akl7777777/deepl-free-translate-service)
 
 使用截图如下
 
