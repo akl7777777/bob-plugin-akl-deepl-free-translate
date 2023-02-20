@@ -1,8 +1,6 @@
 # bob-plugin-akl-deepl-free-translate
 免费无限次使用deepl,根据网页版JavaScript加密算法开发的bobplugin;所以只要官网的算法不改,理论上就可以无限使用
 
-----现在好像开始限制IP访问了,如果同一个IP访问过多好像会被提示;所以如果网页版上不可用,插件也是不可用的
-
 需要有道翻译插件的朋友请看这里:[有道翻译插件](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
 
 需要百度翻译插件的朋友请看这里:[百度翻译插件](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
@@ -15,6 +13,9 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 使用截图如下
 
 <img width="822" alt="image" src="https://user-images.githubusercontent.com/84266551/219542679-e6b0999f-fcf8-447b-a321-00fcab7d55e0.png">
+
+
+----如果遇到同一个IP访问过于频繁,极小概率会报出too many request.此时网页版也会无法使用;但是不必担心,稍后重新尝试即可,一般等10分钟以上就可以.
 
 
 ### 开发不易,如果喜欢可以请作者喝一杯可乐,谢谢!
