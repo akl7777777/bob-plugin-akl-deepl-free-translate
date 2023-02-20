@@ -1,6 +1,13 @@
 {
     "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
-    "versions": [     
+    "versions": [
+        {
+            "version": "0.1.2",
+            "desc": "1.修改插件名称以及图片,使其更官方;2.优化请求异常时的插件相应速度.",
+            "sha256": "6c98b303bea2718aa80a62fc54bce314c24fc0c1d5007d4097e6fbb07b80360e",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/v0.1.2/bob-plugin-akl-deepl-translate_v0.1.2.bobplugin",
+            "minBobVersion": "0.5.0"
+        },
         {
             "version": "0.1.1",
             "desc": "我们今年的动力起点：发布最常被问及的两门语言 —— 书面挪威语和韩语。现已可在我们的应用程序中使用。'Welcome 2023!'; 'Velkommen 2023!' ; '2023 년이 밝았습니다!'.",
