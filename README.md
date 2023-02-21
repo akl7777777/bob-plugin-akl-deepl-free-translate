@@ -1,5 +1,5 @@
 # bob-plugin-akl-deepl-free-translate
-免费无限次使用deepl,根据网页版JavaScript加密算法开发的bobplugin;所以只要官网的算法不改,理论上就可以无限使用
+无需apiKey;无需账号密码;免费无限次使用deepl,根据网页版JavaScript加密算法开发的bobplugin;所以只要官网的算法不改,理论上就可以无限使用
 
 需要有道翻译插件的朋友请看这里:[有道翻译插件](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
 
