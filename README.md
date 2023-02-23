@@ -14,7 +14,7 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 
 使用截图如下
 
-<img width="822" alt="image" src="https://user-images.githubusercontent.com/84266551/219542679-e6b0999f-fcf8-447b-a321-00fcab7d55e0.png">
+<img width="588" alt="image" src="https://user-images.githubusercontent.com/84266551/220933928-52e72e71-8b05-47e8-81a4-323461f0e036.png">
 
 
 ----如果遇到同一个IP访问过于频繁,极小概率会报出too many request.此时网页版也会无法使用;但是不必担心,稍后重新尝试即可,一般等10分钟以上就可以.
