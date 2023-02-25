@@ -1,20 +1,23 @@
 # bob-plugin-akl-deepl-free-translate
 无需apiKey;无需账号密码;免费无限次使用deepl,根据网页版JavaScript加密算法开发的bobplugin;所以只要官网的算法不改,理论上就可以无限使用
 
-### bob翻译插件大合集:
->[有道翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
-
->[百度翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
-
->[只为日语 - MOJi辞書（じしょ）](https://github.com/akl7777777/bob-plugin-akl-mojidict-translate)
-
->[彩云小译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-caiyunxiaoyi-free-translate)
-
 
 bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网地址:https://bobtranslate.com/
 
 deepl免秘钥bob插件下载地址:[bob-plugin-akl-deepl-translate_v0.1.2.bobplugin](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/v0.1.2/bob-plugin-akl-deepl-translate_v0.1.2.bobplugin)
 
+
+### bob翻译插件大合集:
+
+>[DeepL翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
+
+>[有道翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
+
+>[百度翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-baidu-free-translate)
+
+>[彩云小译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-caiyunxiaoyi-free-translate)
+
+>[只为日语 - MOJi辞書（じしょ）](https://github.com/akl7777777/bob-plugin-akl-mojidict-translate)
 
 没有bob的同学,我也有一个单独启动的deepl服务项目,效果跟这个是一样的,只不过要自己启动服务,自己调用接口;详情点[这里](https://github.com/akl7777777/deepl-free-translate-service)
 
