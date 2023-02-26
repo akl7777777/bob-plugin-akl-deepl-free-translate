@@ -2,6 +2,13 @@
     "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
     "versions": [
         {
+            "version": "0.1.3",
+            "desc": "优化响应速度.",
+            "sha256": "078ea17805ab153ec3d31789b73a225c7dfcda5b881076eb41023557392ee097",
+            "url": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/v0.1.3/bob-plugin-akl-deepl-translate_v0.1.3.bobplugin",
+            "minBobVersion": "0.5.0"
+        },
+        {
             "version": "0.1.2",
             "desc": "1.修改插件名称以及图片,使其更官方;2.优化请求异常时的插件相应速度.",
             "sha256": "6c98b303bea2718aa80a62fc54bce314c24fc0c1d5007d4097e6fbb07b80360e",

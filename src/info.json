@@ -1,6 +1,6 @@
 {
     "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "category": "translate",
     "name": "Free DeepL",
     "summary": "免token调用deepl",
