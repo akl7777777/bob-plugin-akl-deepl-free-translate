@@ -11,6 +11,7 @@ deepl免秘钥bob插件下载地址:[DeepL翻译插件(免秘钥,免启动服务
 
 ### bob翻译插件大合集:
 
+
 >[DeepL翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate)
 
 >[有道翻译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-youdao-free-translate)
@@ -26,6 +27,9 @@ deepl免秘钥bob插件下载地址:[DeepL翻译插件(免秘钥,免启动服务
 >[彩云小译插件(免秘钥)](https://github.com/akl7777777/bob-plugin-akl-caiyunxiaoyi-free-translate)
 
 >[只为日语 - MOJi辞書（じしょ）](https://github.com/akl7777777/bob-plugin-akl-mojidict-translate)
+
+>[Bob翻译剪切板图片的AlfredWorkflow](https://github.com/akl7777777/BobTranslateClipboard)
+
 
 没有bob的同学,我也有一个单独启动的deepl服务项目,效果跟这个是一样的,只不过要自己启动服务,自己调用接口;详情点[这里](https://github.com/akl7777777/deepl-free-translate-service)
 
