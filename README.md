@@ -30,6 +30,8 @@ deepl免秘钥bob插件下载地址:[DeepL翻译插件(免秘钥,免启动服务
 
 >[Bob翻译剪切板图片的AlfredWorkflow](https://github.com/akl7777777/BobTranslateClipboard)
 
+>[Bob的Postman接口调试插件](https://github.com/akl7777777/bob-plugin-akl-postman)
+
 
 没有bob的同学,我也有一个单独启动的deepl服务项目,效果跟这个是一样的,只不过要自己启动服务,自己调用接口;详情点[这里](https://github.com/akl7777777/deepl-free-translate-service)
 
