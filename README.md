@@ -8,7 +8,7 @@ deepl免秘钥bob插件下载地址:[DeepL翻译插件(免秘钥,免启动服务
 
 使用方法:双击安装,直接使用
 
-应大家要求,写了一版不依赖Bob内置环境,基于nodejs环境的代码,可以直接终端输入node deepl.js调用,需要的自行取用
+应大家要求,写了一版不依赖Bob内置环境,基于nodejs环境的代码,可以直接终端输入node deepl.js调用,需要的自行取用[deepl.js](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/blob/main/node_js_implementation/deepl.js)
 
 
 ### bob翻译插件大合集:
