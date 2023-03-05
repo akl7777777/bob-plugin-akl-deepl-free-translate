@@ -1,0 +1,56 @@
+name: Release Plugin
+on:
+  push:
+    paths:
+      - "src/info.json"
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get version
+        id: get_version
+        uses: battila7/get-version-action@v2
+
+      - name: Package plugin
+        run: mkdir release && zip -j -r release/bob-plugin-akl-deepl-free-translate.bobplugin ./src/*
+
+      - name: Get last commit title
+        id: last-commit
+        run: echo "::set-output name=last_commit_title::$(git log -1 --pretty=format:%s)"
+
+      - run: git checkout -- src/
+
+      - name: Update appcast.json
+        id: run_script
+        run: |
+          output=$(python3 scripts/update_appcast.py "${{ steps.last-commit.outputs.last_commit_title }}")
+          echo "version=$output" >> $GITHUB_OUTPUT
+
+      - name: Package plugin final
+        run: mv release/bob-plugin-akl-deepl-free-translate.bobplugin release/bob-plugin-akl-deepl-free-translate_${{ steps.run_script.outputs.version }}.bobplugin
+
+      - name: Commit files
+        run: |
+          git config --global user.name 'akl7777777'
+          git config --global user.email 'akl7777777@163.com'
+          git add appcast.json
+          git commit -am 'update appcast.json'
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: release/bob-plugin-akl-deepl-free-translate_${{ steps.run_script.outputs.version }}.bobplugin
+          asset_name: bob-plugin-akl-deepl-free-translate_${{ steps.run_script.outputs.version }}.bobplugin
+          tag: ${{ steps.run_script.outputs.version }}
+          overwrite: true
+          body: "${{ steps.last-commit.outputs.last_commit_title }}"
