@@ -76,32 +76,30 @@ function translate(query, completion) {
         post_str = post_str.replace('"method":"', '"method": "');
       }
       try {
-        $http.request({
+        const resp = await $http.request({
           method: "POST",
           url: url,
           header: { 'Content-Type': 'application/json' },
-          body: $data.fromUTF8(post_str),
-          handler: function (resp) {
-            if (resp.data && resp.data.result && resp.data.result.texts && resp.data.result.texts.length) {
-              completion({
-                result: {
-                  from: query.detectFrom,
-                  to: query.detectTo,
-                  toParagraphs: resp.data.result.texts[0].text.split('\n'),
-                },
-              });
-            } else {
-              const errMsg = resp.data ? JSON.stringify(resp.data) : '未知错误'
-              completion({
-                error: {
-                  type: 'unknown',
-                  message: errMsg,
-                  addtion: errMsg,
-                },
-              });
-            }
-          }
+          body: $data.fromUTF8(post_str)
         });
+        if (resp.data && resp.data.result && resp.data.result.texts && resp.data.result.texts.length) {
+          completion({
+            result: {
+              from: query.detectFrom,
+              to: query.detectTo,
+              toParagraphs: resp.data.result.texts[0].text.split('\n'),
+            },
+          });
+        } else {
+          const errMsg = resp.data ? JSON.stringify(resp.data) : '未知错误'
+          completion({
+            error: {
+              type: 'unknown',
+              message: errMsg,
+              addtion: errMsg,
+            },
+          });
+        }
       }
       catch (e) {
         Object.assign(e, {
