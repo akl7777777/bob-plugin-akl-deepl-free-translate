@@ -37,9 +37,9 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 >[Bob的Postman接口调试插件](https://github.com/akl7777777/bob-plugin-akl-postman)
 
 
-应大家要求,写了一版不依赖Bob内置环境,基于nodejs环境的代码,可以直接终端输入node deepl.js调用,需要的自行取用[deepl.js](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/blob/main/node_js_implementation/deepl.js)
+**应大家要求,写了一版不依赖Bob内置环境,基于nodejs环境的代码,可以直接终端输入node deepl.js调用,需要的自行取用[deepl.js](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/blob/main/node_js_implementation/deepl.js)**
 
-没有bob的同学,我也有一个单独启动的deepl服务项目,效果跟这个是一样的,只不过要自己启动服务,自己调用接口;详情点[这里](https://github.com/akl7777777/deepl-free-translate-service)
+**没有bob的同学,我也有一个单独启动的deepl服务项目,效果跟这个是一样的,只不过要自己启动服务,自己调用接口;详情点[这里](https://github.com/akl7777777/deepl-free-translate-service)**
 
 使用截图如下
 
