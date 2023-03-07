@@ -1,27 +1,48 @@
 {
-    "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
-    "version": "0.1.5",
-    "category": "translate",
-    "name": "Free DeepL",
-    "summary": "免秘钥免启动任何服务调用deepL",
-    "icon": "icon.png",
-    "author": "akl7777777 <akl7777777@163.com>",
-    "homepage": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate",
-    "appcast": "https://raw.githubusercontent.com/akl7777777/bob-plugin-akl-deepl-free-translate/main/appcast.json",
-    "minBobVersion": "0.5.0",
-    "options": [
+  "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
+  "version": "0.2.0",
+  "category": "translate",
+  "name": "Free DeepL",
+  "summary": "免秘钥免启动任何服务调用deepL",
+  "icon": "icon.png",
+  "author": "akl7777777 <akl7777777@163.com>",
+  "homepage": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate",
+  "appcast": "https://raw.githubusercontent.com/akl7777777/bob-plugin-akl-deepl-free-translate/main/appcast.json",
+  "minBobVersion": "0.5.0",
+  "options": [
+    {
+      "identifier": "desc",
+      "type": "menu",
+      "title": "描述",
+      "defaultValue": "akl7777777",
+      "menuValues": [
         {
-            "identifier": "desc",
-            "type": "menu",
-            "title": "描述",
-            "defaultValue": "akl7777777",
-            "menuValues": [
-              {
-                "title": "免秘钥免启动任何服务调用deepL",
-                "value": "akl7777777"
-              }
-            ],
-            "desc":"免秘钥免启动任何服务调用deepL"
+          "title": "免秘钥免启动任何服务调用deepL",
+          "value": "akl7777777"
         }
-    ]
+      ],
+      "desc": "免秘钥免启动任何服务调用deepL"
+    },
+    {
+      "identifier": "service",
+      "type": "menu",
+      "title": "版本",
+      "defaultValue": "default",
+      "menuValues": [
+        {
+          "title": "正式版",
+          "value": "default"
+        },
+        {
+          "title": "Alpha版本",
+          "value": "alpha"
+        },
+        {
+          "title": "Beta版本",
+          "value": "beta"
+        }
+      ],
+      "desc": "版本切换(默认正式版无特殊情况不用修改)"
+    }
+  ]
 }
