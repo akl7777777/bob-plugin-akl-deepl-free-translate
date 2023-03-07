@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
   "versions": [
     {
+      "version": "0.2.0",
+      "desc": "重大更新!!!回馈老用户,现已优化,频繁访问后仍然可以继续免费翻译!!",
+      "sha256": "c9085088233fa30e70ee848ba38971d6edf3bcc2980bb937ce0360b1e728b9b0",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/v0.2.0/bob-plugin-akl-deepl-free-translate_v0.2.0.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.1.5",
       "desc": "优化配置信息,修复小bug",
       "sha256": "b1f29754cf1e86305fdbc585c2bca78b489bbad2cb5b63c931543d5e030c8b20",
