@@ -1,4 +1,4 @@
-const CryptoJS = require("crypto-js");
+const CryptoJS = require("../../../PycharmProjects/youdaoTranslator/crypto-js");
 
 function random(str) {
     return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(str));

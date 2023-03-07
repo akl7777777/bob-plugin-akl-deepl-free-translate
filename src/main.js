@@ -1,6 +1,6 @@
 var config = require('./config.js');
 var utils = require('./utils.js');
-var dd = require('./d/d');
+var dd = require('./d');
 
 // 入参格式:
 // {"jsonrpc":"2.0","method" : "LMT_handle_texts","id":125090001,"params":{"texts":[{"text":"You trusted all proxies, this is NOT safe. We recommend you to set a value.","requestAlternatives":3}],"splitting":"newlines","lang":{"source_lang_user_selected":"EN","target_lang":"ZH"},"timestamp":1676555144560}}

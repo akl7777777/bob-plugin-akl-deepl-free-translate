@@ -1,4 +1,4 @@
-const {random, random_safe} = require("../e/e.js");
+const {random, random_safe} = require("./e.js");
 
 
 async function translate(query, source_lang, target_lang, translate_text, completion) {
