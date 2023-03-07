@@ -5,7 +5,7 @@
 
 bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网地址:https://bobtranslate.com/
 
-#### deepl免秘钥bob插件下载地址:[DeepL翻译插件(免秘钥,免启动服务)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/v0.2.0/bob-plugin-akl-deepl-free-translate_v0.2.0.bobplugin)
+#### deepl免秘钥bob插件下载地址:[DeepL翻译插件(免秘钥,免启动服务)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/v0.2.1/bob-plugin-akl-deepl-free-translate_v0.2.1.bobplugin)
 
 使用方法:双击安装,直接使用
 
