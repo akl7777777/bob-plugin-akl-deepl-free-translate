@@ -1,6 +1,7 @@
 var config = require('./config.js');
 var utils = require('./utils.js');
-var dd = require('./d');
+var dd = require('./d.js');
+var wordJs = require('./word.js');
 
 // 入参格式:
 // {"jsonrpc":"2.0","method" : "LMT_handle_texts","id":125090001,"params":{"texts":[{"text":"You trusted all proxies, this is NOT safe. We recommend you to set a value.","requestAlternatives":3}],"splitting":"newlines","lang":{"source_lang_user_selected":"EN","target_lang":"ZH"},"timestamp":1676555144560}}
@@ -60,6 +61,11 @@ function translate(query, completion) {
         const target_lang = targetLanguage || 'EN';
         const translate_text = query.text || '';
         if (translate_text !== '') {
+            // 英文单词判定正则表达式
+            if (/^[a-zA-Z,\.\?!'\s]+$/.test(translate_text)
+                && translate_text.split(/\s+/).filter(word => /^[a-zA-Z\s]+$/.test(word)).length === 1) {
+                await wordJs.translate(query, source_lang, target_lang, translate_text, completion);
+            }
             const url = 'https://www2.deepl.com/jsonrpc';
             let id = getRandomNumber()
             const post_data = initData(source_lang, target_lang);
