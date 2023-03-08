@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
   "versions": [
     {
+      "version": "0.2.5",
+      "desc": "重大更新-新增DeepL单词查询功能,修正词典发音问题,增加查词开关功能",
+      "sha256": "a84cea11bf1e30e0042241a6fffe708210f1e1bc6d2a97bbc98e882c6644f580",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/v0.2.5/bob-plugin-akl-deepl-free-translate_v0.2.5.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.2.3",
       "desc": "重大更新-新增DeepL单词查询功能",
       "sha256": "855b71f7854a5f94d239c2cec1f6777a1def2b02657fd62ccdf59bcfc95ff832",
