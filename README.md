@@ -1,5 +1,5 @@
 # bob-plugin-akl-deepl-free-translate
-无需apiKey;无需账号密码;免费无限次使用deepl,根据网页版JavaScript加密算法逆向的bobplugin;所以只要官网的算法不改,理论上就可以无限使用
+无需apiKey;无需账号密码;无需启动服务;免费无限次使用deepl,根据网页版JavaScript加密算法逆向的bobplugin;所以只要官网的算法不改,理论上就可以无限使用
 
 **重大更新!!!回馈老用户,现已优化,频繁访问后仍然可以继续免费翻译!!**
 
