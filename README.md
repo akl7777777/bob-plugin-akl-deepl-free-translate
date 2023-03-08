@@ -1,6 +1,8 @@
 # bob-plugin-akl-deepl-free-translate
 无需apiKey;无需账号密码;无需启动服务;免费无限次使用deepl,根据网页版JavaScript加密算法逆向的bobplugin;所以只要官网的算法不改,理论上就可以无限使用
 
+**新增DeepL单词查询功能,效果图下面有**
+
 **重大更新!!!回馈老用户,现已优化,频繁访问后仍然可以继续免费翻译!!**
 
 bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网地址:https://bobtranslate.com/
@@ -8,6 +10,7 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 #### deepl免秘钥bob插件下载地址:[DeepL翻译插件(免秘钥,免启动服务)](https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/v0.2.3/bob-plugin-akl-deepl-free-translate_v0.2.3.bobplugin)
 
 使用方法:双击安装,直接使用
+
 
 
 ### bob翻译插件大合集:
@@ -45,6 +48,12 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 使用截图如下
 
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/84266551/220933928-52e72e71-8b05-47e8-81a4-323461f0e036.png">
+
+单词查询效果:
+
+<img width="621" alt="image" src="https://user-images.githubusercontent.com/84266551/223768247-b6041b44-33c6-4ffe-992b-f6ab47d15b62.png">
+
+
 
 
 ~~----如果遇到同一个IP访问过于频繁,极小概率会报出too many request.此时网页版也会无法使用;但是不必担心,稍后重新尝试即可,一般等10分钟以上就可以.~~
