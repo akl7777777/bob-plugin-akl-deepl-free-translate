@@ -25,22 +25,22 @@ async function translate(query, source_lang, target_lang, translate_text, comple
                 additions: []
             }
             if (translation_lines) {
-                // toDict.phonetics.push({
-                //     "type": "us",
-                //     "value": 'xxx',
-                //     "tts": {
-                //         "type": "url",
-                //         "value": "https://dict.youdao.com/dictvoice?audio="
-                //     }
-                // })
-                // toDict.phonetics.push({
-                //     "type": "uk",
-                //     "value": 'xxx',
-                //     "tts": {
-                //         "type": "url",
-                //         "value": "https://dict.youdao.com/dictvoice?audio="
-                //     }
-                // })
+                toDict.phonetics.push({
+                    "type": "us",
+                    "value": '',
+                    "tts": {
+                        "type": "url",
+                        "value": "https://dict.youdao.com/dictvoice?audio=" + translate_text + '&type=2'
+                    }
+                })
+                toDict.phonetics.push({
+                    "type": "uk",
+                    "value": '',
+                    "tts": {
+                        "type": "url",
+                        "value": "https://dict.youdao.com/dictvoice?audio=" + translate_text + '&type=1'
+                    }
+                })
                 $aLink.each(function () {
                     if ($(this).prop('id')) {
                         toDict.parts.push({part: $(this).next().text(), means:[$(this).text()]})

@@ -61,8 +61,9 @@ function translate(query, completion) {
         const target_lang = targetLanguage || 'EN';
         const translate_text = query.text || '';
         if (translate_text !== '') {
+            const wordSwitch = $option.wordSwitch;
             // 英文单词判定正则表达式
-            if (/^[a-zA-Z,\.\?!'\s]+$/.test(translate_text)
+            if (wordSwitch == '1' && /^[a-zA-Z,\.\?!'\s]+$/.test(translate_text)
                 && translate_text.split(/\s+/).filter(word => /^[a-zA-Z\s]+$/.test(word)).length === 1) {
                 await wordJs.translate(query, source_lang, target_lang, translate_text, completion);
             }

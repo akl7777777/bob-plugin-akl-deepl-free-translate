@@ -1,6 +1,6 @@
 {
   "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "category": "translate",
   "name": "Free DeepL",
   "summary": "免秘钥免启动任何服务调用deepL",
@@ -43,6 +43,23 @@
         }
       ],
       "desc": "版本切换(默认正式版无特殊情况不用修改)"
+    },
+    {
+      "identifier": "wordSwitch",
+      "type": "menu",
+      "title": "查词开关",
+      "defaultValue": "1",
+      "menuValues": [
+        {
+          "title": "开启",
+          "value": "1"
+        },
+        {
+          "title": "关闭",
+          "value": "0"
+        }
+      ],
+      "desc": "查词开关,查到单词自动按照单词格式展开(默认开启)"
     }
   ]
 }
