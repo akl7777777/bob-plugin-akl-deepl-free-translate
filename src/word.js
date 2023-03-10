@@ -41,11 +41,42 @@ async function translate(query, source_lang, target_lang, translate_text, comple
                         "value": "https://dict.youdao.com/dictvoice?audio=" + translate_text + '&type=1'
                     }
                 })
+                const patsArr = []
                 $aLink.each(function () {
                     if ($(this).prop('id')) {
+                        patsArr.push({part: $(this).next().text(), means:[$(this).text()]})
                         toDict.parts.push({part: $(this).next().text(), means:[$(this).text()]})
                     }
                 })
+
+                // 把同类型的分组合并到新数组
+                let newArr = []
+                let means = []
+                let tmpName = ''
+                for (let i = 0; i < patsArr.length; i++) {
+                    if (i===0){
+                        // 第一个直接赋值
+                        tmpName = patsArr[i].part
+                    }
+                    if (patsArr[i].part === tmpName) {
+                        // 相同直接push
+                        means.push(patsArr[i].means[0])
+                    }else {
+                        // 不同先push到新数组,再清空
+                        newArr.push({part: tmpName, means: JSON.parse(JSON.stringify(means))})
+                        means = []
+                        tmpName = patsArr[i].part
+                        means.push(patsArr[i].means[0])
+                        if (i===patsArr.length-1){
+                            break
+                        }
+                    }
+                    if (i===patsArr.length-1){
+                        newArr.push({part: tmpName, means: JSON.parse(JSON.stringify(means))})
+                        means = []
+                    }
+                }
+                toDict.parts = newArr
                 // if (word.wfs && word.wfs.length) {
                 //     word.wfs.forEach(function (e) {
                 //         toDict.exchanges.push({name: e.wf.name, words: [e.wf.value]})

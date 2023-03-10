@@ -85,13 +85,9 @@ function translate(query, completion) {
             }
             try {
                 const serv = $option.service;
-                $log.error(serv)
                 if (serv === 'alpha') {
-                    $log.error(83)
-                    $log.error(JSON.stringify(dd))
                     await dd.translate(query, source_lang, target_lang, translate_text, completion)
                 } else if (serv === 'beta') {
-                    $log.error(86)
                     await dd.translate(query, source_lang, target_lang, translate_text, completion)
                 }
                 const resp = await $http.request({
