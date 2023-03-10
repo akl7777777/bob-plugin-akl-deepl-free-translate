@@ -53,7 +53,7 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 
 单词查询效果:
 
-<img width="621" alt="image" src="https://user-images.githubusercontent.com/84266551/223768247-b6041b44-33c6-4ffe-992b-f6ab47d15b62.png">
+<img width="641" alt="image" src="https://user-images.githubusercontent.com/84266551/224255332-bc31b5f6-4357-4fa2-b696-5db60848061d.png">
 
 
 
