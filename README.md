@@ -13,7 +13,8 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 
 ### 友情链接==>ChatGPT免费桌面版客户端(支持Windows,macOS,Android)
 桌面版ChatGPT下载地址:[OpenAI-ChatGPT免费桌面版客户端](https://github.com/akl7777777/free-chatgpt-client-pub)
-手机版ChatGPT下载地址:[OpenAI-ChatGPT免费手机版客户端]（）https://github.com/akl7777777/free-chatgpt-client-mobile-pub）
+
+手机版ChatGPT下载地址:[OpenAI-ChatGPT免费手机版客户端](https://github.com/akl7777777/free-chatgpt-client-mobile-pub)
 
 ### bob翻译插件大合集:
 
