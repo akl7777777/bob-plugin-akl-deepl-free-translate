@@ -77,18 +77,6 @@ async function translate(query, source_lang, target_lang, translate_text, comple
                     }
                 }
                 toDict.parts = newArr
-                // if (word.wfs && word.wfs.length) {
-                //     word.wfs.forEach(function (e) {
-                //         toDict.exchanges.push({name: e.wf.name, words: [e.wf.value]})
-                //     })
-                // }
-                // if (word.prototype) {
-                //     toDict.exchanges.push({name: '原形', words: [word.prototype]})
-                // }
-                // toDict.additions.push({
-                //     name: '标签',
-                //     value: (resp.data.ec.exam_type ? resp.data.ec.exam_type.join('/') : '')
-                // })
                 completion({
                     result: {
                         from: query.detectFrom,
