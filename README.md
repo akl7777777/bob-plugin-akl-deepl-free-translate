@@ -16,7 +16,11 @@ bob插件主要为bob用户开发,bob是一款macOS上的翻译软件,bob官网�
 
 手机版ChatGPT下载地址:[OpenAI-ChatGPT免费手机版客户端](https://github.com/akl7777777/free-chatgpt-client-mobile-pub)
 
-### bob翻译插件大合集:
+### bob插件大合集:
+
+>[微软语音tts免秘钥bob插件](https://github.com/akl7777777/bob-plugin-akl-microsoft-free-tts)
+
+>[二次元老婆文字转语音bob插件](https://github.com/akl7777777/bob-plugin-akl-moe-tts)
 
 >[OpenAI ChatGPT(免秘钥)插件](https://github.com/akl7777777/bob-plugin-akl-chatgpt-free-translate)
 
