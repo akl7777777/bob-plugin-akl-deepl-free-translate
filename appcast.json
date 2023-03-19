@@ -2,6 +2,13 @@
   "identifier": "com.akl.bob-plugin-akl-deepl-free-translate",
   "versions": [
     {
+      "version": "0.2.7",
+      "desc": "优化单词查询",
+      "sha256": "2ba08c4cd0995e03a7dcbfd08e2305f2c15295d9c8bb71a844af79128425e26f",
+      "url": "https://github.com/akl7777777/bob-plugin-akl-deepl-free-translate/releases/download/v0.2.7/bob-plugin-akl-deepl-free-translate_v0.2.7.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.2.6",
       "desc": "优化deepl词典显示分组",
       "sha256": "676b195d59a9fa260439c2412d84b24a74d6e02946cd63ee236d491756c8d844",
