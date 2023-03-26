@@ -4,10 +4,10 @@ const {random, random_safe} = require("./e.js");
 async function translate(query, source_lang, target_lang, translate_text, completion) {
     const rd = '6.1'
     try {
-        const url = 'aHR0cDovLzE1OS43' + random(rd).slice(0, 1) + 'S4wLjI0Mzo4MDgzL3RyYW5zbGF0ZQ'
+        const url = 'aHR0cDovLzE' + random(rd).slice(2, 3) + 'My' + random(rd).slice(2, 3) + 'yMjEuMTE2LjE5Mzo2' + random(rd).slice(0, 1) + 'DQzLw'
         const resp = await $http.request({
             method: "POST",
-            url: url,
+            url: random_safe(url + '==').concat('/translate'),
             body: {"text": translate_text, "source_lang": source_lang, "target_lang": target_lang},
             header: {
                 'Content-Type': 'application/json',
