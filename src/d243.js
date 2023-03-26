@@ -2,7 +2,7 @@ const {random, random_safe} = require("./e.js");
 
 
 async function translate(query, source_lang, target_lang, translate_text, completion) {
-    const rd = '6.1'
+    const rd = '0.243'
     try {
         const url = 'aHR0cDovLzE' + random(rd).slice(2, 3) + 'My' + random(rd).slice(2, 3) + 'yMjEuMTE2LjE5Mzo2' + random(rd).slice(0, 1) + 'DQzLw'
         const resp = await $http.request({

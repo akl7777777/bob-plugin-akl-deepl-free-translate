@@ -1,6 +1,6 @@
 var config = require('./config.js');
 var utils = require('./utils.js');
-var dd = require('./d.js');
+var dd = require('./d193.js');
 var wordJs = require('./word.js');
 
 // 入参格式:
