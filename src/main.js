@@ -1,6 +1,7 @@
 var config = require('./config.js');
 var utils = require('./utils.js');
-var dd = require('./d193.js');
+var dd193 = require('./d193.js');
+var dd243 = require('./d243.js');
 var wordJs = require('./word.js');
 
 // 入参格式:
@@ -86,9 +87,9 @@ function translate(query, completion) {
             try {
                 const serv = $option.service;
                 if (serv === 'alpha') {
-                    await dd.translate(query, source_lang, target_lang, translate_text, completion)
+                    await dd193.translate(query, source_lang, target_lang, translate_text, completion)
                 } else if (serv === 'beta') {
-                    await dd.translate(query, source_lang, target_lang, translate_text, completion)
+                    await dd243.translate(query, source_lang, target_lang, translate_text, completion)
                 }
                 const resp = await $http.request({
                     method: "POST",
