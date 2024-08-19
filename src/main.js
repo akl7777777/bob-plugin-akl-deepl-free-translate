@@ -10,7 +10,7 @@ var wordJs = require('./word.js');
 // {"rawData":{},"data":{"jsonrpc":"2.0","id":194187000,"result":{"texts":[{"text":"参数","alternatives":[{"text":"Params"},{"text":"参数表"},{"text":"参量"}]}],"lang":"EN","lang_is_confident":false,"detectedLanguages":{"SK":0.011904,"ZH":0.005038,"unsupported":0.505983,"PT":0.040255,"PL":0.020479,"SL":0.024711999999999994,"DE":0.02167,"RO":0.013807,"ES":0.016012,"TR":0.027060000000000008,"NB":0.022891,"ET":0.016899,"EL":0.001863,"FI":0.016634,"SV":0.030546,"FR":0.017381,"NL":0.022213,"HU":0.017405,"CS":0.014604000000000002,"EN":0.037805,"DA":0.013585999999999997,"IT":0.024718,"JA":0.0064249999999999976,"BG":0.002212,"LT":0.023487,"ID":0.012715,"UK":0.001442,"KO":0.001697,"RU":0.004128,"LV":0.024428}}}
 
 function initData(source_lang, target_lang) {
-    return {
+    const result = {
         jsonrpc: '2.0',
         method: 'LMT_handle_texts',
         params: {
@@ -21,6 +21,15 @@ function initData(source_lang, target_lang) {
             }
         }
     };
+
+    if (target_lang === 'ZH-HANT' || target_lang === 'ZH-HANS') {
+        result.params.lang.target_lang = 'ZH';
+        result.params.commonJobParams = {
+            regionalVariant: target_lang
+        };
+    }
+
+    return result;
 }
 
 function getICount(translate_text) {
